@@ -21,12 +21,13 @@ build:
   error_overdepending: true
   ignore_run_exports:
     - gds-services
-  number: 0
+  number: 1
   skip: true  # [not linux]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - make
     - pkg-config
   host:
