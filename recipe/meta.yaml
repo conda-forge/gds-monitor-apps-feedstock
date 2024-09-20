@@ -1,11 +1,11 @@
 {% set name = "gds-monitor-apps" %}
-{% set version = "3.0.0" %}
+{% set version = "3.0.1" %}
 
 # dependencies
-{% set gds_base_version = "3.0.0" %}
-{% set gds_dmt_version = "3.0.0" %}
-{% set gds_frameio_version = "3.0.0" %}
-{% set gds_gui_version = "3.0.0" %}
+{% set gds_base_version = "3.0.1" %}
+{% set gds_dmt_version = "3.0.1" %}
+{% set gds_frameio_version = "3.0.1" %}
+{% set gds_gui_version = "3.0.1" %}
 {% set ldas_tools_framecpp_version = "2.5.8" %}
 
 package:
@@ -14,19 +14,20 @@ package:
 
 source:
   url: https://software.igwn.org/sources/source/{{ name }}-{{ version }}.tar.gz
-  sha256: 90a86bfe86b0e07e3c2d49dafdce8d61ffa583b11fb4168d04908e4b0f65c927
+  sha256: 709302c202189b497358a48b9a27007e9e3c2465743d1f859d2d7c59b14760b5
 
 build:
   error_overlinking: true
   error_overdepending: true
   ignore_run_exports:
     - gds-services
-  number: 0
+  number: 1
   skip: true  # [not linux]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - make
     - pkg-config
   host:
