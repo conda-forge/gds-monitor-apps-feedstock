@@ -17,7 +17,7 @@ docker_image:
 fftw:
 - '3'
 jsoncpp:
-- 1.9.5
+- 1.9.6
 ldas_tools_framecpp:
 - '2.9'
 libboost_headers:
