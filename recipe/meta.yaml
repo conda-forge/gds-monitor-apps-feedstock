@@ -21,7 +21,7 @@ build:
   error_overdepending: true
   ignore_run_exports:
     - gds-services
-  number: 5
+  number: 6
   skip: true  # [not linux64]
 
 requirements:
