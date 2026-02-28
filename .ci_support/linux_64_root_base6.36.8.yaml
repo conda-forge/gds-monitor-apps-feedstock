@@ -19,6 +19,6 @@ jsoncpp:
 libboost_headers:
 - '1.88'
 root_base:
-- 6.36.04
+- 6.36.8
 target_platform:
 - linux-64
