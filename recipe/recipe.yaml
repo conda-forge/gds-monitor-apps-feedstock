@@ -1,0 +1,75 @@
+schema_version: 1
+
+context:
+  name: gds-monitor-apps
+  version: 3.0.1
+  # dependencies
+  gds_base_version: 3.0.1
+  gds_dmt_version: 3.0.1
+  gds_frameio_version: 3.0.1
+  gds_gui_version: 3.0.1
+  ldas_tools_framecpp_version: 2.5.8
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://software.igwn.org/sources/source/${{ name }}-${{ version }}.tar.gz
+  sha256: 709302c202189b497358a48b9a27007e9e3c2465743d1f859d2d7c59b14760b5
+
+build:
+  dynamic_linking:
+    overdepending_behavior: error
+    overlinking_behavior: error
+  number: 10
+  skip:
+    - not linux64
+
+requirements:
+  build:
+    - ${{ compiler("cxx") }}
+    - ${{ stdlib("c") }}
+    - ${{ stdlib("c") }}
+    - make
+    - pkg-config
+  host:
+    - fftw
+    - gds-base >=${{ gds_base_version }}
+    - gds-base-gdstrig >=${{ gds_base_version }}
+    - gds-base-monitors >=${{ gds_base_version }}
+    - gds-dmt-base >=${{ gds_dmt_version }}
+    - gds-dmt-monitors >=${{ gds_dmt_version }}
+    - gds-frameio-base >=${{ gds_frameio_version }}
+    - gds-gui-crtools >=${{ gds_gui_version }}
+    - gds-services >=${{ gds_base_version }}
+    - jsoncpp
+    - ldas-tools-al
+    - ldas-tools-framecpp >=${{ ldas_tools_framecpp_version }}
+    - libboost-headers
+    - root_base
+  #run:
+  #  - gds-dmt-base >=${{ gds_dmt_version }}
+  #  - gds-dmt-monitors >=${{ gds_dmt_version }}
+  #  - jsoncpp
+  ignore_run_exports:
+    by_name:
+      - gds-services
+
+tests:
+  - script:
+      - set -x
+      - kleineWelleM
+      - SenseMonitor --help
+
+about:
+  summary: DMT Monitor programs
+  description: GDS DMT monitor programs
+  homepage: https://computing.docs.ligo.org/daswgweb/projects/dmt.html
+  license: GPL-2.0-only
+  license_file: COPYING
+
+extra:
+  recipe-maintainers:
+    - duncanmmacleod
+    - emaros
