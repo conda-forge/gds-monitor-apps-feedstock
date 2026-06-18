@@ -16,38 +16,6 @@ Current build status
 
 
 <table>
-    
-  <tr>
-    <td>Azure</td>
-    <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=21054&branchName=main">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gds-monitor-apps-feedstock?branchName=main">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>linux_64_root_base6.34.10</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=21054&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gds-monitor-apps-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root_base6.34.10" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_root_base6.36.04</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=21054&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gds-monitor-apps-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root_base6.36.04" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
-    </td>
-  </tr>
 </table>
 
 Current release info
