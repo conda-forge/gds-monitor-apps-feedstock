@@ -15,10 +15,10 @@ docker_image:
 fftw:
 - '3'
 jsoncpp:
-- 1.9.6
+- 1.9.7
 libboost_headers:
 - '1.88'
 root_base:
-- 6.38.0
+- 6.38.4
 target_platform:
 - linux-64
