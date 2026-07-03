@@ -17,8 +17,8 @@ fftw:
 jsoncpp:
 - 1.9.6
 libboost_headers:
-- '1.88'
+- '1.90'
 root_base:
-- 6.38.0
+- 6.36.10
 target_platform:
 - linux-64
