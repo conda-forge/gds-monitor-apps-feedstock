@@ -22,7 +22,7 @@ build:
   dynamic_linking:
     overdepending_behavior: error
     overlinking_behavior: error
-  number: 10
+  number: 11
   skip:
     - not linux64
 
